@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import Markdown from "react-markdown";
+import { MarkdownContent } from "@/components/markdown-content";
 import { profile } from "@/data/profile";
 import { formatDate, getPostBySlug, getPostSlugs } from "@/lib/posts";
 
@@ -45,9 +45,7 @@ export default async function BlogPostPage({ params }: Props) {
       <h1 className="mt-2 text-3xl font-semibold tracking-tight">
         {post.title}
       </h1>
-      <div className="markdown mt-8">
-        <Markdown>{post.content}</Markdown>
-      </div>
+      <MarkdownContent content={post.content} />
     </main>
   );
 }

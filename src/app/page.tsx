@@ -7,12 +7,13 @@ const buttonClass =
 export default function Home() {
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-md flex-col items-center justify-center px-6 py-16">
-      <div
-        className="flex h-24 w-24 items-center justify-center rounded-full bg-mist text-2xl font-medium tracking-wide text-ink"
-        aria-hidden="true"
-      >
-        {profile.initials}
-      </div>
+      <img
+        src={profile.photo}
+        alt={profile.name}
+        width={128}
+        height={128}
+        className="h-32 w-32 rounded-full object-cover ring-2 ring-mist"
+      />
       <h1 className="mt-5 text-center text-2xl font-semibold tracking-tight">
         {profile.name}
       </h1>
