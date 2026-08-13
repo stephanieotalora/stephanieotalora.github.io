@@ -3,7 +3,7 @@ export const profile = {
   photo: "/stephanie.png",
   initials: "SO",
   title: "Psicóloga y escritora",
-  tagline: "Acompaño el autoconocimiento y escribo sobre la vida interior.",
+  tagline: "Sigueme en mis redes sociales",
   links: [
     { label: "Blog", href: "/blog", external: false },
     {
@@ -17,8 +17,8 @@ export const profile = {
       external: true,
     },
     {
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/in/stephanie-ot%C3%A1lora-anillo-61984424a/",
+      label: "Substack",
+      href: "https://substack.com/@stephanieotalora",
       external: true,
     }
   ],
