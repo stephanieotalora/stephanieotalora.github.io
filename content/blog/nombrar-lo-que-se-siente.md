@@ -9,3 +9,7 @@ Hay emociones que llegan antes que el lenguaje. Un nudo, una prisa, una tristeza
 No se trata de explicarlo todo. Se trata de mirar con más claridad: qué duele, qué importa, qué se puede sostener ahora.
 
 La escritura, para mí, no es un adorno del oficio. Es otra forma de escucha.
+
+### Otra seccion
+
+y luego de mil años...
