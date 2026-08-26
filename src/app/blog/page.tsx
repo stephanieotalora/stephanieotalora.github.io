@@ -14,15 +14,7 @@ export default function BlogPage() {
   const posts = getPosts();
 
   return (
-    <Page
-      title="Escritura sobre la vida interior"
-      lead={
-        <p>
-          Reflexiones sobre lo que sentimos, lo que elegimos y lo que aprendemos
-          en el camino.
-        </p>
-      }
-    >
+    <Page>
       {posts.length === 0 ? (
         <p className="mt-10 text-soft">Pronto habrá textos publicados aquí.</p>
       ) : (
