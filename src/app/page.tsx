@@ -27,14 +27,11 @@ export default function Home() {
           <li key={item.href}>
             <Link
               href={item.href}
-              className="group flex items-center gap-4 rounded-xl border border-line px-5 py-4 transition-colors hover:border-clay hover:bg-shell/60"
+              className="group flex items-center gap-3 rounded-xl px-4 py-2 transition-colors hover:bg-shell/60"
             >
               <UiIcon name={item.icon} className="h-5 w-5 shrink-0 text-clay" />
-              <span className="min-w-0 flex-1">
-                <span className="block text-sm font-medium">{item.label}</span>
-                <span className="block truncate text-sm text-soft">
-                  {item.detail}
-                </span>
+              <span className="min-w-0 flex-1 text-base font-medium">
+                {item.label}
               </span>
               <span
                 aria-hidden="true"
