@@ -6,7 +6,7 @@ import { nav, photos, profile } from "@/data/profile";
 
 export default function Home() {
   return (
-    <main className="mx-auto flex min-h-screen w-full max-w-md flex-col items-center justify-center px-6 py-16">
+    <main className="mx-auto flex min-h-screen w-full max-w-md flex-col items-center justify-center px-6 py-6">
       <Photo
         photo={photos.retrato}
         alt={profile.name}
