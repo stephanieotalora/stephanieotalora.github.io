@@ -27,10 +27,6 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  :target {
-    scroll-margin-top: 6rem;
-  }
-
   ::selection {
     background: var(--color-shell);
     color: var(--color-clay-dark);
