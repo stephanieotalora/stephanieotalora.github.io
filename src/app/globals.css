@@ -3,23 +3,40 @@
 
 @theme {
   --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
-  --color-cream: #f4efea;
-  --color-ink: #5f4f45;
-  --color-sea: #4e6f86;
-  --color-sage: #8faf9a;
-  --color-mist: #b7c7d1;
+  --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+
+  /* Cálidos de base */
+  --color-bone: #fbf7f2;
+  --color-shell: #f2eae0;
+  --color-line: #e3d6c7;
+
+  /* Texto */
+  --color-ink: #2f2a26;
+  --color-soft: #6d6158;
+
+  /* Acentos */
+  --color-clay: #ad6349;
+  --color-clay-dark: #914e37;
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    background-color: var(--color-cream);
+    background-color: var(--color-bone);
     color: var(--color-ink);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
 
+  :target {
+    scroll-margin-top: 6rem;
+  }
+
   ::selection {
-    background: var(--color-mist);
-    color: var(--color-ink);
+    background: var(--color-shell);
+    color: var(--color-clay-dark);
   }
 }

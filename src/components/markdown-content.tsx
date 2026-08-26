@@ -1,6 +1,7 @@
 import { Children, isValidElement } from "react";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import { proseClass } from "@/components/prose";
 
 type MediaProps = {
   src?: string;
@@ -54,7 +55,7 @@ function Caption({ text }: { text?: string }) {
   }
 
   return (
-    <figcaption className="mt-2 text-center text-sm text-ink/60">
+    <figcaption className="mt-2 text-center text-sm text-soft">
       {text}
     </figcaption>
   );
@@ -69,7 +70,7 @@ function Media({ src, alt }: MediaProps) {
   if (yt) {
     return (
       <figure>
-        <div className="aspect-video overflow-hidden rounded-xl bg-ink/10">
+        <div className="aspect-video overflow-hidden rounded-xl bg-shell">
           <iframe
             src={`https://www.youtube-nocookie.com/embed/${yt}`}
             title={alt || "YouTube"}
@@ -87,7 +88,7 @@ function Media({ src, alt }: MediaProps) {
   if (vimeo) {
     return (
       <figure>
-        <div className="aspect-video overflow-hidden rounded-xl bg-ink/10">
+        <div className="aspect-video overflow-hidden rounded-xl bg-shell">
           <iframe
             src={`https://player.vimeo.com/video/${vimeo}`}
             title={alt || "Vimeo"}
@@ -138,7 +139,7 @@ function Media({ src, alt }: MediaProps) {
 
 export function MarkdownContent({ content }: { content: string }) {
   return (
-    <div className="prose prose-lg mt-8 max-w-none text-ink prose-headings:font-semibold prose-headings:tracking-tight prose-headings:text-ink prose-a:text-sea prose-a:no-underline hover:prose-a:text-sage prose-strong:text-ink prose-blockquote:border-sage prose-blockquote:text-ink/80 prose-hr:border-mist prose-li:marker:text-sage">
+    <div className={`${proseClass} mt-8`}>
       <Markdown
         rehypePlugins={[rehypeRaw]}
         components={{

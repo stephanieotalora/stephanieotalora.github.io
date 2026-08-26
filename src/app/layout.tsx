@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
-import { profile } from "@/data/profile";
+import { Fraunces, Outfit } from "next/font/google";
+import { profile, roleLine } from "@/data/profile";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -9,8 +9,14 @@ const outfit = Outfit({
   display: "swap",
 });
 
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: `${profile.name} | ${profile.title}`,
+  title: `${profile.name} | ${roleLine}`,
   description: profile.tagline,
 };
 
@@ -20,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={outfit.variable}>
-      <body className="min-h-screen bg-cream font-sans text-ink antialiased">
+    <html lang="es" className={`${outfit.variable} ${fraunces.variable}`}>
+      <body className="min-h-screen bg-bone font-sans text-ink antialiased">
         {children}
       </body>
     </html>

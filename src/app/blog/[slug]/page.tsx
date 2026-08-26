@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MarkdownContent } from "@/components/markdown-content";
+import { Page } from "@/components/page";
 import { profile } from "@/data/profile";
 import { formatDate, getPostBySlug, getPostSlugs } from "@/lib/posts";
 
@@ -34,18 +34,13 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getPostBySlug(slug);
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-6 py-16">
-      <Link
-        href="/blog"
-        className="text-sm text-sea transition-colors hover:text-sage"
-      >
-        ← Blog
-      </Link>
-      <p className="mt-8 text-sm text-ink/55">{formatDate(post.date)}</p>
-      <h1 className="mt-2 text-3xl font-semibold tracking-tight">
-        {post.title}
-      </h1>
+    <Page
+      backHref="/blog"
+      backLabel="Blog"
+      eyebrow={formatDate(post.date)}
+      title={post.title}
+    >
       <MarkdownContent content={post.content} />
-    </main>
+    </Page>
   );
 }

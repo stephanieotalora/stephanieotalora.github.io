@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
@@ -22,6 +23,7 @@
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "postcss": "^8.5.26",
+    "sharp": "^0.35.3",
     "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2"
   }
