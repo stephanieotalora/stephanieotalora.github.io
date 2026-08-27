@@ -19,7 +19,7 @@ export default function ContactoPage() {
         </p>
       }
     >
-      <ul className="mt-10 space-y-3">
+      <ul className="mt-10 space-y-2">
         {channels.map((channel) => {
           const content = (
             <>

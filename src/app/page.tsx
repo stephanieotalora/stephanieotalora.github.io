@@ -14,15 +14,15 @@ export default function Home() {
         priority
         className="h-32 w-32 rounded-full object-cover ring-1 ring-line"
       />
-      <h1 className="mt-6 font-serif text-3xl font-semibold tracking-tight">
+      <h1 className="mt-4 font-serif text-3xl font-semibold tracking-tight">
         {profile.name}
       </h1>
       <RoleLine className="mt-3 justify-center" />
-      <p className="mt-5 text-center leading-relaxed text-soft">
+      <p className="mt-4 text-center leading-relaxed text-soft">
         {profile.tagline}
       </p>
 
-      <ul className="mt-10 w-full space-y-3">
+      <ul className="mt-8 w-full space-y-2">
         {nav.map((item) => (
           <li key={item.href}>
             <Link
