@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${outfit.variable} ${fraunces.variable}`}>
-      <body className="min-h-screen bg-bone font-sans text-ink antialiased">
+      <body className="min-h-svh bg-bone font-sans text-ink antialiased">
         {children}
       </body>
     </html>
