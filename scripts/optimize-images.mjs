@@ -38,6 +38,12 @@ const jobs = [
     widths: [800, 1600],
     quality: 68,
   },
+  {
+    src: "portada-olvidando.jpg",
+    name: "portada-olvidando",
+    // Portada de /libros. El original es 435px de ancho; no agrandar.
+    widths: [224, 435],
+  },
 ];
 
 /** Traduce un `square` en fracciones a la región en píxeles de esta fuente. */

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ActionLink } from "@/components/action-link";
 import { Page } from "@/components/page";
+import { Photo } from "@/components/photo";
 import { Prose } from "@/components/prose";
 import { book, profile } from "@/data/profile";
 
@@ -8,30 +9,6 @@ export const metadata: Metadata = {
   title: `Libros | ${profile.name}`,
   description: `${book.title}, el primer libro de ${profile.name}.`,
 };
-
-function Cover() {
-  if (book.cover) {
-    return (
-      <img
-        src={book.cover}
-        alt={`Portada de ${book.title}`}
-        width={224}
-        height={336}
-        className="w-56 rounded-xl border border-line object-cover"
-      />
-    );
-  }
-
-  /* TODO: cuando la portada esté lista, ponla en data/profile.ts (book.cover). */
-  return (
-    <div className="flex aspect-2/3 w-56 flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-line bg-shell/60 p-6 text-center">
-      <span className="font-serif leading-snug text-balance">{book.title}</span>
-      <span className="text-xs tracking-[0.16em] text-soft uppercase">
-        Portada
-      </span>
-    </div>
-  );
-}
 
 export default function LibrosPage() {
   return (
@@ -54,7 +31,12 @@ export default function LibrosPage() {
       </Prose>
 
       <div className="mt-12 border-t border-line pt-10">
-        <Cover />
+        <Photo
+          photo={book.cover}
+          alt={`Portada de ${book.title}`}
+          sizes="224px"
+          className="w-56 rounded-xl border border-line object-cover shadow-sm"
+        />
 
         <h2 className="mt-8 font-serif text-xl font-semibold tracking-tight">
           {book.title}

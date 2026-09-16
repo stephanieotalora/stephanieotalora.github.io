@@ -19,7 +19,7 @@ export const profile = {
 export const roleLine = profile.roles.join(" · ");
 
 /** Fotos generadas por `npm run images` a partir de src/assets/. */
-export const photos: Record<"retrato" | "fondoSobreMi", PhotoData> = {
+export const photos: Record<"retrato" | "fondoSobreMi" | "portadaLibro", PhotoData> = {
   retrato: {
     src: "/img/retrato-256.webp",
     srcSet: "/img/retrato-256.webp 256w, /img/retrato-512.webp 512w",
@@ -32,6 +32,13 @@ export const photos: Record<"retrato" | "fondoSobreMi", PhotoData> = {
       "/img/sobre-mi-fondo-800.webp 800w, /img/sobre-mi-fondo-1600.webp 1600w",
     width: 800,
     height: 1200,
+  },
+  portadaLibro: {
+    src: "/img/portada-olvidando-224.webp",
+    srcSet:
+      "/img/portada-olvidando-224.webp 224w, /img/portada-olvidando-435.webp 435w",
+    width: 224,
+    height: 342,
   },
 };
 
@@ -92,7 +99,7 @@ export const podcast = {
 
 export const book = {
   title: "Olvidando a mi casi algo",
-  cover: "", // TODO: sube la portada a /public y pon aquí "/portada-olvidando-a-mi-casi-algo.jpg"
+  cover: photos.portadaLibro,
   buyUrl: "", // TODO
 };
 
